@@ -394,7 +394,7 @@ abstract class ZugferdDocumentPdfBuilderAbstract
             $content,
             $fullFilename,
             $displayName,
-            $relationshipType,
+            $relationshipType
         );
 
         return $this;
@@ -719,7 +719,7 @@ abstract class ZugferdDocumentPdfBuilderAbstract
                 $fileToAttach[1],
                 $fileToAttach[2],
                 $fileToAttach[3],
-                $fileToAttach[4],
+                $fileToAttach[4]
             );
         }
 

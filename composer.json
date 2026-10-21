@@ -33,8 +33,14 @@
             "horstoeko\\zugferd\\tests\\": "tests"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/APS-Services/mimedb"
+        }
+    ],
     "require": {
-        "php": ">=7.3",
+        "php": ">=7.2",
         "ext-dom": "*",
         "ext-fileinfo": "*",
         "ext-json": "*",
@@ -62,7 +68,7 @@
         "phpstan/phpstan": "^1|^2.1",
         "phpstan/phpstan-deprecation-rules": "^1|^2",
         "phpstan/phpstan-strict-rules": "^1|^2",
-        "phpunit/phpunit": "^9.6",
+        "phpunit/phpunit": "^8.5|^9.6",
         "rector/rector": "^2"
     },
     "scripts": {

@@ -82,7 +82,8 @@ final class ReaderXRechnungAttachedBinaryObjectTest extends TestCase
         $this->assertArrayNotHasKey(1, $name);
         $this->assertEquals('Aufschlüsselung der einzelnen Leistungspositionen', $name[0]);
         $this->assertSame('', $binarydatafilename);
-        $this->assertFileDoesNotExist($binarydatafilename);
+        // assertFileDoesNotExist() needs PHPUnit 9.1, PHP 7.2 runs PHPUnit 8.5
+        $this->assertFalse(file_exists($binarydatafilename));
         $this->assertSame('application/pdf', $binarymimecode);
         $this->assertSame('01_15_Anhang_01.pdf', $binaryfilename);
     }

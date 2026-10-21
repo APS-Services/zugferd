@@ -51,7 +51,7 @@ jobs:
       fail-fast: false
       matrix:
         operating-system: [ubuntu-24.04]
-        phpversion: ['7.3', '7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
+        phpversion: ['7.2', '7.3', '7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
 
     steps:
       - name: Checkout sources
@@ -102,7 +102,7 @@ jobs:
           mkdir -p build/rector-cache
 
       - name: Run parallel lint (PHP 7.x)
-        if: ${{ contains(fromJSON('["7.3","7.4","8.0"]'), matrix.phpversion) }}
+        if: ${{ contains(fromJSON('["7.2","7.3","7.4","8.0"]'), matrix.phpversion) }}
         run: vendor/bin/parallel-lint --exclude src/codelistsenum src tests
 
       - name: Run parallel lint (PHP 8.x)
@@ -141,7 +141,7 @@ jobs:
       - name: Run PHPUnit tests
         env:
           XDEBUG_MODE: coverage
-        run: vendor/bin/phpunit --stop-on-failure --configuration build/phpunit.xml
+        run: vendor/bin/phpunit --stop-on-failure --configuration build/phpunit.xml --log-junit build/logs/junit.xml
 
       - name: Save quality tools cache
         if: ${{ !cancelled() && steps.quality-cache-restore.outputs.cache-hit != 'true' }}

@@ -33,7 +33,7 @@ class ZugferdUnsupportedMimetype extends ZugferdBaseException
         parent::__construct(
             sprintf('Mimetype %s is not supported', $mimetype),
             ZugferdExceptionCodes::UNSUPPORTEDMIMETYPE,
-            $previous,
+            $previous
         );
     }
 }

@@ -400,7 +400,7 @@ class MarkDownGenerator
                         $parameter['name'],
                         $parameter['type'],
                         $this->boolToMarkDown($parameter['isNullable'] ? 'Yes' : 'No'),
-                        $parameter['description'] ?? '',
+                        $parameter['description'] ?? ''
                     );
                 }
 
