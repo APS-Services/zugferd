@@ -387,7 +387,7 @@ if ($documentReader->firstDocumentTax()) {
             '  %s %s %s',
             str_pad($documentTaxcategoryCode, 20, ' ', STR_PAD_RIGHT),
             str_pad($documentTaxTypeCode, 20, ' ', STR_PAD_RIGHT),
-            str_pad(number_format($documentTaxRateApplicablePercent, 2), 10, ' ', STR_PAD_RIGHT),
+            str_pad(number_format($documentTaxRateApplicablePercent, 2), 10, ' ', STR_PAD_RIGHT)
         );
     } while ($documentReader->nextDocumentTax());
 } else {

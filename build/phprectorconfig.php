@@ -48,9 +48,9 @@ return RectorConfig::configure()
         RemoveUselessUnionReturnDocblockRector::class,
         RemoveMixedDocblockOverruledByNativeTypeRector::class,
     ])
-    ->withPhpVersion(PhpVersion::PHP_73)
+    ->withPhpVersion(PhpVersion::PHP_72)
     ->withSets([
-        LevelSetList::UP_TO_PHP_73,
+        LevelSetList::UP_TO_PHP_72,
         SetList::DEAD_CODE,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,

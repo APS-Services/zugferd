@@ -580,10 +580,10 @@ class ZugferdObjectHelper
                     FileUtils::getFilenameWithExtension(
                         FileUtils::changeFileExtension(
                             FileUtils::getFilenameWithExtension($binaryDataFilename),
-                            $fileExtension,
-                        ),
-                    ),
-                ),
+                            $fileExtension
+                        )
+                    )
+                )
             );
             $loadedFromBase64 = true;
         }

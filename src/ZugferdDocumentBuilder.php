@@ -112,7 +112,7 @@ class ZugferdDocumentBuilder extends ZugferdDocument
      *
      * Returns $this, so a derived builder such as ZugferdQuickDescriptor keeps its own
      * type through createNew(). The native return type cannot say static: the package
-     * still supports PHP 7.3.
+     * still supports PHP 7.2.
      *
      * @return self
      */
